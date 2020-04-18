@@ -9,7 +9,7 @@ rm -rf /package/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git /package/luci-theme-argon
 git clone https://github.com/jerrykuku/lua-maxminddb.git /package/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git /package/luci-app-vssr
-git clone https://github.com/vernesong/OpenClash.git /package/OpenClash
+git clone https://github.com/vernesong/OpenClash.git /package/luci-app-openclash
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.184/g' package/base-files/files/bin/config_generate
