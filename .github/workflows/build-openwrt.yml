@@ -85,7 +85,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        $GITHUB_WORKSPACE/$PRESET_P1_SH armv8
+
         $GITHUB_WORKSPACE/$PRESET_P2_SH
 
     - name: SSH connection to Actions
