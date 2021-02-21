@@ -108,7 +108,7 @@ sed -i '/http/d' zzz-default-settings
 popd
 
 # Mod ipv6-helper.sh
-sed -i '/filter_aaaa/d;/commit dhcp/d' ../scripts/ipv6-helper.sh
+sed -i '/filter_aaaa/d;/commit dhcp/d' ipv6-helper.sh
 
 # Remove orig kcptun
 rm -rf ./feeds/packages/net/kcptun
@@ -138,12 +138,12 @@ popd
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # Convert Translation
-cp ../scripts/convert-translation.sh .
+cp convert-translation.sh .
 chmod +x ./convert-translation.sh
 ./convert-translation.sh || true
 
 # Remove upx
-cp ../scripts/remove-upx.sh .
+cp remove-upx.sh .
 chmod +x ./remove-upx.sh
 ./remove-upx.sh || true
 
