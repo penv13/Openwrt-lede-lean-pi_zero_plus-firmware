@@ -83,8 +83,8 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        $GITHUB_WORKSPACE/preset-clash-core.sh armv8
-        $GITHUB_WORKSPACE/preset-terminal-tools.sh
+        sudo $GITHUB_WORKSPACE/preset-clash-core.sh armv8
+        sudo $GITHUB_WORKSPACE/preset-terminal-tools.sh
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
