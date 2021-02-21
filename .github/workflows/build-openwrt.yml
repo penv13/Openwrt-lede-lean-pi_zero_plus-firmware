@@ -28,6 +28,8 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
+  PRESET_P1_SH: preset-clash-core.sh
+  PRESET_P2_SH: preset-terminal-tools.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -83,12 +85,8 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        cp $GITHUB_WORKSPACE/preset-clash-core.sh
-        chomd +x ./preset-clash-core.sh
-        ./preset-clash-core.sh armv8
-        cp $GITHUB_WORKSPACE/preset-terminal-tools.sh
-        chomd +x ./preset-terminal-tools.sh
-        ./preset-terminal-tools.sh
+        $GITHUB_WORKSPACE/$PRESET_P1_SH armv8
+        $GITHUB_WORKSPACE/$PRESET_P2_SH
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
